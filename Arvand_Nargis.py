@@ -8,21 +8,20 @@ model_selected = st.radio('What analysis do you want to use', ('DecisionTreeClas
 
 
 if model_selected == 'DecisionTreeClassifier':
-    pickle_in = open("scoring_imon_ModelTree.pkl","rb")
+    pickle_in = open("scoring_Arvand_ModelTree.pkl","rb")
     classifier=pickle.load(pickle_in)
 elif model_selected in ['LogisticRegression', 'Default']:
-    pickle_in = open("scoring_imon_LogReg.pkl","rb")
+    pickle_in = open("scoring_Arvand_LogReg.pkl","rb")
     classifier=pickle.load(pickle_in)
 elif model_selected in ['KNeighborsClassifier', 'Default']:
-    pickle_in = open("scoring_imon_KNeighborsClassifier.pkl","rb")
+    pickle_in = open("scoring_Arvand_KNeighborsClassifier.pkl","rb")
     classifier=pickle.load(pickle_in)
 
 def predict_note_authentication(FamilySize, BusExper, Сумма кредита, Срок кредита, Ежемесячная сумма погашения по графику, Льготный период (месяц), Этап кредитования (который раз получает кредит, isMale, family_condition, Education, Filial_code, level, typeofcredit, Nationality_code, Направление_деятельности, Sector, Region_code, Age, finish_date):
     prediction=classifier.predict([[FamilySize, BusExper, Сумма кредита, Срок кредита, Ежемесячная сумма погашения по графику, Льготный период (месяц), Этап кредитования (который раз получает кредит, isMale, family_condition, Education, Filial_code, level, typeofcredit, Nationality_code, Направление_деятельности, Sector, Region_code, Age, finish_date]])
     print(prediction)
     return prediction    
-    
-
+             
 
 def main():
     st.title("Прогноз выдачи кредита")
