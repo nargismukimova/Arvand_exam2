@@ -28,13 +28,13 @@ def main():
     st.markdown("Учебная модель поможет предсказать одобрение выдачи кредита на основе введенных данных.")
     
     
-    FamilySize = st.radio ('Сколько людей в семье?', step=1, value=0)
+    FamilySize = st.number_input ('Сколько людей в семье?', step=1, value=0)
     BusExper = st.radio ('Опыт работы? (6 - 6-мох, 4 - 4-мох, 21 - 20+', (4,6,21))
-    Credit_Sum = st.radio ('Сумма кредита', step=1, value=0)
-    Credit_period = st.radio ('Срок кредита', step=1, value=0)
-    Month_Sum = st.radio ('Сумма погашения в месяц', step=1, value=0)
-    Lgot_period = st.radio ('Льготный период', step=1, value=0)
-    Credit_Stage = st.radio ('Этап кредитования', step=1, value=0)
+    Credit_Sum = st.number_input ('Сумма кредита', step=1, value=0)
+    Credit_period = st.number_input ('Срок кредита', step=1, value=0)
+    Month_Sum = st.number_input ('Сумма погашения в месяц', step=1, value=0)
+    Lgot_period = st.number_input ('Льготный период', step=1, value=0)
+    Credit_Stage = st.number_input ('Этап кредитования', step=1, value=0)
     isMale = st.radio ('Ваш пол? (0 - Женский, 1 - Мужской', (0,1))
     family_condition = st.radio ('Семейное состояние? (1 - Оиладор, 2 - Беоила, 3 - Бевамард, 4 - Чудошуда', (1,2,3,4))
     Education = st.radio ('Уровень образования? (1 - Миёна, 2 - Оли, 3 - Миёнаи махсус, 4 - Олии нопурра, 5 - Миёнаи нопурра', (1,2,3,4,5))
@@ -42,11 +42,11 @@ def main():
     level = st.radio ('Уровень клиента? (1 - Хамкори, 2 - Шарик, 3 - VIP, 4 - Бовари', (1,2,3,4))
     typeofcredit = st.radio ('Тип кредита? (1 - Кредит на предпринимательскую деятельность, 2 - Потребительский кредит, 3 - Энергосберегающие технологии, 4 - Жилищный кредит', (1,2,3,4))
     Nationality_code = st.radio ('Национальность? (0 - Другие, 1 - Точик, 2 - Узбек, 3 - Тотор, 4 - Рус, 5 - Киргиз, 6 - Украин, 7 - Карис, 8 - Карачои', (0,1,2,3,4,5,6,7,8))
-    Activity_Direction = st.radio ('Ваша деятельность?', step=1, value=0)
-    Sector = st.radio ('Ваш сектор?', step=1, value=0)
-    Region_code = st.radio ('Ваш регион?', step=1, value=0)
-    Age = st.radio ('Ваш возраст?', step=1, value=0)
-    finish_date = st.radio ('Дата завершения?', step=1, value=0)
+    Activity_Direction = st.number_input ('Ваша деятельность?', step=1, value=0)
+    Sector = st.number_input ('Ваш сектор?', step=1, value=0)
+    Region_code = st.number_input ('Ваш регион?', step=1, value=0)
+    Age = st.number_input ('Ваш возраст?', step=1, value=0)
+    finish_date = st.number_input ('Дата завершения?', step=1, value=0)
                                                                                                                                            
       
      
