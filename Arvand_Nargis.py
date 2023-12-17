@@ -29,7 +29,7 @@ def main():
     
     
     FamilySize = st.number_input ('Сколько людей в семье?', step=1, value=0)
-    BusExper = st.radio ('Опыт работы? (6 - 6-мох, 4 - 4-мох, 21 - 20+', (4,6,21))
+    BusExper =st.number_input ('Опыт работы?', step=1, value=0)
     Credit_Sum = st.number_input ('Сумма кредита', step=1, value=0)
     Credit_period = st.number_input ('Срок кредита', step=1, value=0)
     Month_Sum = st.number_input ('Сумма погашения в месяц', step=1, value=0)
